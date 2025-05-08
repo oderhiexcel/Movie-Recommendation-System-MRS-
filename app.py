@@ -38,8 +38,8 @@ def get_recommendations(user_id, num_recommendations=10):
 st.title("Movie Recommendation System")
 user_id = st.text_input("Enter your User ID (1 to 943):", "1")
 
-# Show recommendations
-if user_id:
+# Add a button to trigger recommendations
+if st.button("Get Recommendations"):
     try:
         user_id = int(user_id)
         if 1 <= user_id <= 943:
